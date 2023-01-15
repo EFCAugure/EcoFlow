@@ -13,8 +13,7 @@
 	"hasOwnDeamon" : false,
 	"maxDependancyInstallTime" : 0,
 	"language": [
-		"fr_FR",
-		"en_US"
+		"fr_FR"
 	],
 	"compatibility": [
 		"miniplus",
@@ -25,5 +24,9 @@
 		"mobile",
 		"v4",
 		"atlas"
-	]
+	],
+	"changelog": "https://github.com/EFCAugure/EcoFlow/tree/main/docs/fr_FR/changelog.md",
+  	"documentation": "https://github.com/EFCAugure/EcoFlow/tree/main/docs/fr_FR/index.md",
+  	"changelog_beta": "https://github.com/EFCAugure/EcoFlow/tree/main/docs/fr_FR/changelog.md",
+  	"documentation_beta": "https://github.com/EFCAugure/EcoFlow/tree/main/docs/fr_FR/index.md"
 }
