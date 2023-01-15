@@ -1,18 +1,26 @@
-# Plugin template
+# Plugin ecoflow
 
-Ce "template de plugin" sert de base à la réalisation de plugins pour **Jeedom**.
+Ce plugin permet de récupérer les informations fournies par l'API externe EcoFlow sur ses batteries.
 
-La documentation générale relative à la conception de plugin est consultable [ici](https://doc.jeedom.com/fr_FR/dev/).
+Actuellement, il est nécessaire de demander au support l'url, la clé API et la clé secrète pour chacun de vos équipements.
 
-Dans le détail :   
-* [Utilisation du template de plugin](https://doc.jeedom.com/fr_FR/dev/plugin_template) : Le template de plugin est une base de plugin pour Jeedom qui doit être adaptée avec l'id de votre plugin et à laquelle il suffit d'ajouter vos propres fonctions.
+Il n'est malheureusement plus possible de récupérer ces informations en local puisque pour des raisons de sécurité, EcoFlow a fermé la porte au cours de l'année 2022.
 
-* [Fichier info.json](https://doc.jeedom.com/fr_FR/dev/structure_info_json) : Intégré depuis la version 3.0 de Jeedom, le fichier **info.json** est obligatoire pour le bon fonctionnement des plugins et leur bon déploiement sur le Market Jeedom.
+Les informations fournies actuellement sont plutôt basiques puisque ce ne sont que la durée restante (en charge ou en décharge), le pourcentage de batterie restant, la puissance consommée en entrée et la puissance délivrée en sortie (tous points de sorties confondus).
 
-* [Icône du plugin](https://doc.jeedom.com/fr_FR/dev/Icone_de_plugin) : Afin de pouvoir être publié sur le Market Jeedom, tout plugin doit disposer d’une icône. Attention à ne pas utiliser le même code couleur que les icônes des plugins Jeedom officiels.
 
-* [Widget du plugin](https://doc.jeedom.com/fr_FR/dev/widget_plugin) : Présentation des différentes manières d'inclure des widgets personnalisés au plugin.
+# Configuration du plugin
 
-* [Documentation du plugin](https://doc.jeedom.com/fr_FR/dev/documentation_plugin) : Présentation de la mise en place d'une documentation car un bon plugin n'est rien sans documentation adéquate.
+* Renseigner l'URL d'appel de l'API EcoFlow (peut varier) pour tous les équipements.
 
-* [Publication du plugin](https://doc.jeedom.com/fr_FR/dev/publication_plugin) : Description des pré-requis indispensables à la publication du plugin.
+
+# Configuration de l'équipement
+
+* Renseigner le numéro de série de l'équipement (visible sous ce dernier) ou fourni par le support EcoFlow.
+
+* Renseigner la clé API.
+
+* Renseigner la clé secrète.
+
+* Spécifier la fréquence d'actualisation des données propre à cette équipement.
+
