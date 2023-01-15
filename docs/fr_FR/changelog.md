@@ -8,3 +8,6 @@
 
 - Optimisations dans les commandes équipement (types de valeurs désormais corrects)
 
+- Ajout de la doc et du changelog
+
+

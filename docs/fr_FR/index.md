@@ -11,16 +11,16 @@ Les informations fournies actuellement sont plutôt basiques puisque ce ne sont 
 
 # Configuration du plugin
 
-* Renseigner l'URL d'appel de l'API EcoFlow (peut varier) pour tous les équipements.
+- Renseigner l'URL d'appel de l'API EcoFlow (peut varier) pour tous les équipements.
 
 
 # Configuration de l'équipement
 
-* Renseigner le numéro de série de l'équipement (visible sous ce dernier) ou fourni par le support EcoFlow.
+- Renseigner le numéro de série de l'équipement (visible sous ce dernier) ou fourni par le support EcoFlow.
 
-* Renseigner la clé API.
+- Renseigner la clé API.
 
-* Renseigner la clé secrète.
+- Renseigner la clé secrète.
 
-* Spécifier la fréquence d'actualisation des données propre à cette équipement.
+- Spécifier la fréquence d'actualisation des données propre à cette équipement.
 
