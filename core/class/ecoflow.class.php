@@ -216,7 +216,7 @@ class ecoflow extends eqLogic {
     $info->setLogicalId('code');
     $info->setEqLogic_id($this->getId());
     $info->setType('info');
-    $info->setSubType('string');
+    $info->setSubType('numeric');
     $info->save();
     
     //-----------------------------------------------------------
@@ -240,7 +240,7 @@ class ecoflow extends eqLogic {
     $info->setLogicalId('soc');
     $info->setEqLogic_id($this->getId());
     $info->setType('info');
-    $info->setSubType('string');
+    $info->setSubType('numeric');
     $info->save();
     
     //-----------------------------------------------------------
@@ -264,7 +264,7 @@ class ecoflow extends eqLogic {
     $info->setLogicalId('puissance_out');
     $info->setEqLogic_id($this->getId());
     $info->setType('info');
-    $info->setSubType('string');
+    $info->setSubType('numeric');
     $info->save();
 
     //-----------------------------------------------------------
@@ -276,7 +276,7 @@ class ecoflow extends eqLogic {
     $info->setLogicalId('puissance_in');
     $info->setEqLogic_id($this->getId());
     $info->setType('info');
-    $info->setSubType('string');
+    $info->setSubType('numeric');
     $info->save();
     
     //-----------------------------------------------------------
