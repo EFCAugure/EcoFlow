@@ -144,8 +144,14 @@ class ecoflow extends eqLogic {
     curl_setopt($curl_command, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl_command, CURLOPT_URL, $url);
     curl_setopt($curl_command, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($curl_command, CURLINFO_HEADER_OUT, true);
     
     $curl_return = curl_exec($curl_command);
+    
+    log::add("ecoflow", 'info', '==> curl command URL : ' . curl_getinfo($curl_command, CURLINFO_EFFECTIVE_URL) , 'ecoflowInfo');
+    log::add("ecoflow", 'info', '==> curl command HEADER OUT: ' . curl_getinfo($curl_command, CURLINFO_HEADER_OUT) , 'ecoflowInfo');
+    log::add("ecoflow", 'info', '==> curl return : ' . $curl_return , 'ecoflowInfo');
+    
     curl_close($curl_command);
     
     //décodage du JSON $curl_return pour récupérer les valeurs
@@ -154,12 +160,16 @@ class ecoflow extends eqLogic {
     $sortie[0] = $obj->code;
     $sortie[1] = $obj->message;
 
+    log::add("ecoflow", 'info', '==> Sortie 0 (code) : ' .  $sortie[0] , 'ecoflowInfo');
+  
     //si le retour est correct, on récupère les autres infos
     if ($sortie[0] == 0) {          
       $wattsOutSum = $obj->data->wattsOutSum;
       $wattsInSum = $obj->data->wattsInSum;
       $remainTime = sprintf('%02d',intdiv($obj->data->remainTime, 60)) .'h '. ( sprintf('%02d',$obj->data->remainTime % 60) . 'm');      
       $soc = $obj->data->soc;
+      
+      log::add("ecoflow", 'info', '==> CODE OK' , 'ecoflowInfo');
     } 
     else
     {
@@ -167,6 +177,8 @@ class ecoflow extends eqLogic {
       $wattsInSum = ' ';
       $remainTime = ' ';
       $soc = ' ';
+      
+      log::add("ecoflow", 'info', '==> CODE KO' , 'ecoflowInfo');
     }
     
     $sortie[2] = $soc;
